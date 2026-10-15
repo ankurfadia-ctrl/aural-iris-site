@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aural Iris — AI clinical reasoning and documentation workflows for emergency medicine</title>
-<meta name="description" content="Aural Iris — physician-customizable AI clinical reasoning, information integration and documentation workflows for emergency medicine.">
+<title>Aural Iris — Built by an emergency physician. Made for your workflow.</title>
+<meta name="description" content="Built by an emergency physician. Talk, paste or add chart photos. Aural Iris brings the details together, supports your reasoning and drafts notes in your style.">
 <meta name="theme-color" content="#0b4d5c">
 <link rel="icon" type="image/png" href="assets/aural-iris-logo.png">
 <style>
@@ -76,6 +76,21 @@ footer a{color:var(--gold-200)}
   ol.steps li{padding-left:3.6rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+ol.steps.flow{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+ol.steps.flow li{padding:1.5rem;display:flex;flex-direction:column}
+ol.steps.flow li::before{position:static;margin-bottom:1rem}
+ol.steps.flow li:not(:last-child)::after{content:"→";position:absolute;right:-1.3rem;top:46%;font-size:1.5rem;color:var(--teal-700)}
+.step-icon{display:none}
+ol.steps.flow strong{font-size:1.25rem;line-height:1.25}
+ol.steps.flow p{font-size:1rem;color:var(--muted);margin:.6rem 0 0}
+.workflow-caption{font-size:.88rem;color:var(--muted);margin:.8rem 0 0}
+.room-preview{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2.5rem;margin-top:2.5rem}
+.room-preview h3{font-size:1.65rem;color:var(--teal-800);margin:0 0 .5rem;line-height:1.2}
+.room-preview p{color:var(--muted)}
+.room-preview figure{margin:0}
+.room-preview figcaption{font-size:.85rem}
+@media(max-width:760px){ol.steps.flow{grid-template-columns:1fr}ol.steps.flow li:not(:last-child)::after{display:none}.room-preview{grid-template-columns:1fr;gap:1rem}.hero{padding:2.5rem 0 3rem}.hero-logo{order:0}.hero-logo img{width:120px}.hero .wrap{gap:1.5rem}section{padding:2.5rem 0}}
 </style>
 </head>
 <body>
@@ -84,8 +99,8 @@ footer a{color:var(--gold-200)}
   <div class="wrap">
     <a class="brand" href="#top"><img src="assets/aural-iris-logo.png" alt="Aural Iris logo" width="44" height="44"><span>Aural Iris</span></a>
     <nav aria-label="Primary">
-      <a href="#what">What it is</a>
-      <a href="#workflow">Workflow</a>
+      <a href="#workflow">How it works</a>
+      <a href="#what">What Iris handles</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -95,11 +110,11 @@ footer a{color:var(--gold-200)}
 <div class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="eyebrow">For emergency medicine</p>
-      <h1>Listen. Capture. Integrate. <span>Make documentation flow.</span></h1>
-      <p class="lede">Aural Iris is a physician-customizable AI clinical reasoning, information integration and documentation workflow platform for emergency medicine, built for physician review.</p>
+      <p class="eyebrow">Built by an emergency physician</p>
+      <h1>Focus on the patient.<br><span>Let Iris do the heavy lifting.</span></h1>
+      <p class="lede">Talk, paste or add a chart photo. Iris brings the details together, supports your reasoning and drafts the note in your style.</p>
       <div class="cta">
-        <a class="btn primary" href="https://www.youtube.com/@auralirisapp" rel="noopener">Visit our YouTube channel</a>
+        <a class="btn primary" href="#workflow">See how it works</a>
         <a class="btn secondary" href="mailto:auralirisapp@gmail.com?subject=Aural%20Iris%20business%20inquiry">Business inquiries</a>
       </div>
     </div>
@@ -109,76 +124,55 @@ footer a{color:var(--gold-200)}
   </div>
 </div>
 
-<section id="what" aria-labelledby="what-h">
+<section class="alt" id="workflow" aria-labelledby="wf-h">
   <div class="wrap">
-    <h2 id="what-h">What Aural Iris does</h2>
-    <p class="intro">It listens to encounters and accepts dictation, pasted text, chart photos and screenshots; integrates the information; and organizes work through a room/encounter map. The physician keeps final clinical approval and signature.</p>
-    <div class="grid">
-      <div class="card"><h3>Listen and capture</h3><p>Audio, dictation, pasted chart text, and permitted chart photos or screenshots, brought into one encounter workspace.</p></div>
-      <div class="card"><h3>Room map</h3><p>Organize work by room and encounter, with supported room labels, layout and workflow settings you can customize.</p></div>
-      <div class="card"><h3>Clinical reasoning and MDM</h3><p>Supports clinical reasoning, differential considerations and medical decision-making drafting for the physician to review and correct.</p></div>
-      <div class="card"><h3>Medicolegal documentation</h3><p>Detailed documentation support, with prompts for missing information so the physician can add actual findings and rationale.</p></div>
-      <div class="card"><h3>MIPS / quality prompts</h3><p>Quality-measure documentation prompts for physician review. Performance-year specifications and actual measure fulfillment still require verification.</p></div>
-      <div class="card"><h3>Your note, your style</h3><p>Tailor supported note structure, style, rules and workflow settings, then copy reviewed sections into the EHR.</p></div>
-    </div>
+    <h2 id="wf-h">Bring in the details. Iris takes it from there.</h2>
+    <p class="intro">One simple flow, from encounter to a note you can use.</p>
+    <ol class="steps flow" aria-label="Three-step Iris workflow">
+      <li><span class="step-icon" aria-hidden="true">↳</span><strong>Capture it.</strong><p>Let Iris listen, dictate a quick thought, paste chart details or add a photo.</p></li>
+      <li><span class="step-icon" aria-hidden="true">✦</span><strong>Let Iris work.</strong><p>Iris connects the information, supports your reasoning and builds the note, including MDM and documentation prompts.</p></li>
+      <li><span class="step-icon" aria-hidden="true">✓</span><strong>Review. Copy. Done.</strong><p>Make any edits, then copy the note into your EHR for your final approval and signature.</p></li>
+    </ol>
+    <p class="workflow-caption">Illustrative workflow.</p>
   </div>
 </section>
 
-<section class="alt" id="workflow" aria-labelledby="wf-h">
+<section id="what" aria-labelledby="what-h">
   <div class="wrap">
-    <h2 id="wf-h">Example workflow</h2>
-    <p class="intro"><span class="badge">Illustrative</span>An example of the intended supported workflow. It contains no patient data.</p>
-    <ol class="steps">
-      <li><strong>Choose the encounter.</strong> Open the patient’s assigned room on the map and verify the correct encounter. Customize supported room labels/layout and documentation preferences.</li>
-      <li><strong>Bring the information together.</strong> Listen or dictate; paste relevant chart text; capture permitted chart photos or screenshots. Verify readability, encounter association and capture status.</li>
-      <li><strong>Review the integrated encounter.</strong> Iris combines the supplied information into the encounter workspace and supports clinical reasoning, differential considerations and MDM drafting. Correct discrepancies and confirm the supporting facts.</li>
-      <li><strong>Address what is missing.</strong> Review relevant documentation, medicolegal and quality-measure prompts. Add actual findings, decisions and rationale; do not invent a discussion, examination, treatment or completed measure.</li>
-      <li><strong>Finish in your own style.</strong> Refine the supported note sections, wording and rules; review the entire output, then copy the approved sections into the EHR. The physician controls clinical decisions and personally approves/signs the final record.</li>
-    </ol>
-
-    <figure>
-      <svg viewBox="0 0 800 380" role="img" aria-labelledby="map-t map-d">
-        <title id="map-t">Illustrative room map diagram</title>
-        <desc id="map-d">A schematic grid of labeled rooms, one highlighted, with arrows leading from capture inputs to an encounter workspace and then to physician review. Illustrative only; not a screenshot of the application.</desc>
-        <rect width="800" height="380" fill="#f2f9fa"/>
-        <text x="20" y="30" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#0b4d5c">Room map</text>
-        <g font-family="system-ui,sans-serif" font-size="15" text-anchor="middle">
-          <rect x="20" y="48" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="75" y="93" fill="#06323d">Room A</text>
-          <rect x="145" y="48" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="200" y="93" fill="#06323d">Room B</text>
-          <rect x="270" y="48" width="110" height="80" rx="10" fill="#f5e2b0" stroke="#d9a93f" stroke-width="4"/><text x="325" y="93" fill="#06323d" font-weight="700">Room C</text>
-          <rect x="20" y="143" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="75" y="188" fill="#06323d">Room D</text>
-          <rect x="145" y="143" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="200" y="188" fill="#06323d">Room E</text>
-          <rect x="270" y="143" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="325" y="188" fill="#06323d">Room F</text>
-        </g>
-        <text x="20" y="250" font-family="system-ui,sans-serif" font-size="13" fill="#43595f">Example labels only; supported labels and layout are customizable.</text>
-        <g font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">
-          <rect x="420" y="48" width="170" height="44" rx="8" fill="#0b4d5c"/><text x="505" y="75" fill="#fff">Listen / dictate</text>
-          <rect x="420" y="102" width="170" height="44" rx="8" fill="#0b4d5c"/><text x="505" y="129" fill="#fff">Pasted chart text</text>
-          <rect x="420" y="156" width="170" height="44" rx="8" fill="#0b4d5c"/><text x="505" y="183" fill="#fff">Photos / screenshots</text>
-          <rect x="620" y="70" width="160" height="110" rx="12" fill="#06323d" stroke="#d9a93f" stroke-width="3"/>
-          <text x="700" y="115" fill="#f5e2b0" font-weight="700">Encounter</text>
-          <text x="700" y="135" fill="#f5e2b0" font-weight="700">workspace</text>
-          <rect x="620" y="250" width="160" height="60" rx="12" fill="#fff" stroke="#d9a93f" stroke-width="3"/>
-          <text x="700" y="276" fill="#06323d" font-weight="700">Physician review</text>
-          <text x="700" y="296" fill="#06323d">and approval</text>
-        </g>
-        <g stroke="#d9a93f" stroke-width="3" fill="none" stroke-linecap="round">
-          <path d="M380 88 H410"/><path d="M590 70 L610 110"/><path d="M590 124 H610"/><path d="M590 178 L610 140"/>
-          <path d="M700 180 V240"/><path d="M692 232 L700 244 L708 232"/>
-        </g>
-        <text x="20" y="360" font-family="system-ui,sans-serif" font-size="13" fill="#7a5a12" font-weight="700">ILLUSTRATIVE DIAGRAM — NOT A SCREENSHOT OF THE APPLICATION. NO PATIENT DATA.</text>
-      </svg>
-      <figcaption>Illustrative room-map and workflow diagram drawn for this page. It is not a real app screenshot.</figcaption>
-    </figure>
-
-    <p class="note">Make the workflow yours: tailor the supported note structure, style, rules and room settings. Review the integrated information, drafts and quality prompts, then personally approve the final record. Available functions depend on the version and configuration.</p>
+    <h2 id="what-h">More of the work, handled.</h2>
+    <p class="intro">Capture, reasoning and documentation together, with settings you can make your own.</p>
+    <div class="grid">
+      <div class="card"><h3>Information, brought together</h3><p>Audio, pasted text and chart images in one encounter.</p></div>
+      <div class="card"><h3>Reasoning and MDM</h3><p>Help connecting the clinical details and drafting your medical decision-making.</p></div>
+      <div class="card"><h3>Thorough documentation</h3><p>Medicolegal and quality-measure prompts help surface missing details.</p></div>
+      <div class="card"><h3>Your note, your style</h3><p>Customize note sections, wording and workflow preferences.</p></div>
+    </div>
+    <div class="room-preview">
+      <div><h3>Your shift at a glance.</h3><p>Move between rooms and keep each encounter organized on the room map.</p></div>
+      <figure>
+        <svg viewBox="0 0 420 220" role="img" aria-labelledby="map-t map-d">
+          <title id="map-t">Illustrative room map</title>
+          <desc id="map-d">Six example rooms in two rows. Room C is selected. This is an illustration, not an app screenshot.</desc>
+          <rect width="420" height="220" rx="16" fill="#f2f9fa"/>
+          <g font-family="system-ui,sans-serif" font-size="15" text-anchor="middle" fill="#06323d">
+            <rect x="20" y="25" width="115" height="75" rx="10" fill="#fff" stroke="#126577"/><text x="77" y="68">Room A</text>
+            <rect x="152" y="25" width="115" height="75" rx="10" fill="#fff" stroke="#126577"/><text x="209" y="68">Room B</text>
+            <rect x="284" y="25" width="115" height="75" rx="10" fill="#f5e2b0" stroke="#d9a93f" stroke-width="3"/><text x="341" y="68" font-weight="700">Room C</text>
+            <rect x="20" y="120" width="115" height="75" rx="10" fill="#fff" stroke="#126577"/><text x="77" y="163">Room D</text>
+            <rect x="152" y="120" width="115" height="75" rx="10" fill="#fff" stroke="#126577"/><text x="209" y="163">Room E</text>
+            <rect x="284" y="120" width="115" height="75" rx="10" fill="#fff" stroke="#126577"/><text x="341" y="163">Room F</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative room map, not an app screenshot.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
 <section class="contact" id="contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <h2 id="contact-h">Follow along or get in touch</h2>
-    <p>Follow Aural Iris for product and workflow updates, or get in touch about the platform.</p>
+    <h2 id="contact-h">Built for the realities of the ED.</h2>
+    <p>Created by the Aural Iris founder, an emergency physician. Follow Aural Iris for updates or get in touch about the platform.</p>
     <p><strong>Please do not send patient information or any protected health information by email.</strong></p>
     <div class="cta">
       <a class="btn primary" href="https://www.youtube.com/@auralirisapp" rel="noopener">Visit our YouTube channel</a>
@@ -191,7 +185,8 @@ footer a{color:var(--gold-200)}
 <footer>
   <div class="wrap">
     <p><strong>Aural Iris LLC.</strong> Informational page only.</p>
-    <p>Aural Iris supports physician review and does not replace clinical judgment. The physician retains final clinical approval and signature. No real clinical example or screenshot is used on this page.</p>
+    <p>Physicians review the output and retain final clinical decisions and signature. Features vary by version and settings. Quality prompts do not establish completed MIPS reporting or guarantee payment or legal outcomes.</p>
+    <p>© 2026 Aural Iris LLC. Rights reserved in copyrightable material.</p>
     <p>Aural Iris™ and the Iris logo are claimed as marks of Aural Iris LLC.</p>
     <p>This site has no forms, tracking or analytics.</p>
   </div>
