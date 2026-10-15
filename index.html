@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aural Iris — AI clinical reasoning and documentation workflows for emergency medicine</title>
+<meta name="description" content="Aural Iris — physician-customizable AI clinical reasoning, information integration and documentation workflows for emergency medicine.">
+<meta name="theme-color" content="#0b4d5c">
+<link rel="icon" type="image/png" href="assets/aural-iris-logo.png">
+<style>
+:root{
+  --teal-900:#06323d;--teal-800:#0b4d5c;--teal-700:#126577;--teal-100:#e3f1f3;--teal-50:#f2f9fa;
+  --gold-500:#d9a93f;--gold-400:#e6bd5c;--gold-200:#f5e2b0;--gold-700:#7a5a12;
+  --ink:#10242b;--muted:#43595f;--paper:#fffdf8;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:1.0625rem}
+img,svg{max-width:100%;height:auto}
+a{color:var(--teal-700)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold-500);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold-200);color:var(--ink);padding:.6rem 1rem;z-index:10}
+.skip:focus{left:0}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+header.site{background:var(--teal-900);color:#fff}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.02em}
+.brand img{width:44px;height:44px;border-radius:10px}
+nav a{color:var(--gold-200);text-decoration:none;margin-left:1.25rem;font-size:.97rem}
+nav a:hover{text-decoration:underline}
+.hero{background:radial-gradient(circle at 80% 20%,var(--teal-700),var(--teal-900) 65%);color:#fff;padding:4rem 0 4.5rem}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:2.5rem;align-items:center}
+.eyebrow{color:var(--gold-400);text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;font-weight:700;margin:0 0 .75rem}
+h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.1;margin:0 0 1rem}
+h1 span{color:var(--gold-400)}
+.lede{font-size:1.2rem;color:#dcecef;max-width:38em;margin:0 0 1.75rem}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--gold-400)}
+.btn.primary{background:var(--gold-400);color:var(--teal-900)}
+.btn.primary:hover{background:var(--gold-200)}
+.btn.secondary{color:var(--gold-200);background:transparent}
+.btn.secondary:hover{background:rgba(255,255,255,.1)}
+.hero-logo{justify-self:center}
+.hero-logo img{width:min(300px,70vw);border-radius:22%;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+section{padding:3.5rem 0}
+section.alt{background:var(--teal-50)}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--teal-800);margin:0 0 .5rem;line-height:1.2}
+h2::after{content:"";display:block;width:56px;height:4px;background:var(--gold-500);border-radius:2px;margin-top:.6rem}
+.intro{color:var(--muted);max-width:46em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-top:1.75rem}
+.card{background:#fff;border:1px solid #d6e5e8;border-top:4px solid var(--gold-500);border-radius:var(--radius);padding:1.2rem 1.25rem}
+.card h3{margin:0 0 .4rem;color:var(--teal-800);font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:1.75rem 0 0;display:grid;gap:1rem}
+ol.steps li{counter-increment:s;background:#fff;border:1px solid #d6e5e8;border-radius:var(--radius);padding:1rem 1.25rem 1rem 4.2rem;position:relative}
+ol.steps li::before{content:counter(s);position:absolute;left:1.1rem;top:1rem;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--teal-800);color:var(--gold-200);font-weight:700;display:grid;place-items:center}
+ol.steps strong{color:var(--teal-800)}
+.note{margin-top:1.5rem;padding:1rem 1.25rem;border-left:5px solid var(--gold-500);background:var(--gold-200);color:#3d2e07;border-radius:6px;font-size:.98rem}
+figure{margin:2rem 0 0}
+figure svg{width:100%;border-radius:var(--radius);border:1px solid #bcd4d9;background:#fff}
+figcaption{font-size:.95rem;color:var(--muted);margin-top:.6rem}
+.badge{display:inline-block;background:var(--gold-700);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;margin-right:.4rem}
+.contact{background:var(--teal-900);color:#fff}
+.contact h2{color:#fff}
+.contact p{color:#dcecef;max-width:44em}
+.contact a:not(.btn){color:var(--gold-200)}
+footer{background:#041f26;color:#b9ced3;padding:2rem 0;font-size:.92rem}
+footer p{margin:.3rem 0}
+footer a{color:var(--gold-200)}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-logo{order:-1}
+  .hero-logo img{width:150px}
+  nav a{margin-left:.9rem}
+  ol.steps li{padding-left:3.6rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/aural-iris-logo.png" alt="Aural Iris logo" width="44" height="44"><span>Aural Iris</span></a>
+    <nav aria-label="Primary">
+      <a href="#what">What it is</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">For emergency medicine</p>
+      <h1>Listen. Capture. Integrate. <span>Make documentation flow.</span></h1>
+      <p class="lede">Aural Iris is a physician-customizable AI clinical reasoning, information integration and documentation workflow platform for emergency medicine, built for physician review.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://www.youtube.com/@auralirisapp" rel="noopener">Visit our YouTube channel</a>
+        <a class="btn secondary" href="mailto:auralirisapp@gmail.com?subject=Aural%20Iris%20business%20inquiry">Business inquiries</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img src="assets/aural-iris-logo.png" alt="Aural Iris logo: a gold aperture-like swirl with a medical cross and pulse line on a deep teal background" width="300" height="300">
+    </div>
+  </div>
+</div>
+
+<section id="what" aria-labelledby="what-h">
+  <div class="wrap">
+    <h2 id="what-h">What Aural Iris does</h2>
+    <p class="intro">It listens to encounters and accepts dictation, pasted text, chart photos and screenshots; integrates the information; and organizes work through a room/encounter map. The physician keeps final clinical approval and signature.</p>
+    <div class="grid">
+      <div class="card"><h3>Listen and capture</h3><p>Audio, dictation, pasted chart text, and permitted chart photos or screenshots, brought into one encounter workspace.</p></div>
+      <div class="card"><h3>Room map</h3><p>Organize work by room and encounter, with supported room labels, layout and workflow settings you can customize.</p></div>
+      <div class="card"><h3>Clinical reasoning and MDM</h3><p>Supports clinical reasoning, differential considerations and medical decision-making drafting for the physician to review and correct.</p></div>
+      <div class="card"><h3>Medicolegal documentation</h3><p>Detailed documentation support, with prompts for missing information so the physician can add actual findings and rationale.</p></div>
+      <div class="card"><h3>MIPS / quality prompts</h3><p>Quality-measure documentation prompts for physician review. Performance-year specifications and actual measure fulfillment still require verification.</p></div>
+      <div class="card"><h3>Your note, your style</h3><p>Tailor supported note structure, style, rules and workflow settings, then copy reviewed sections into the EHR.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="workflow" aria-labelledby="wf-h">
+  <div class="wrap">
+    <h2 id="wf-h">Example workflow</h2>
+    <p class="intro"><span class="badge">Illustrative</span>An example of the intended supported workflow. It contains no patient data.</p>
+    <ol class="steps">
+      <li><strong>Choose the encounter.</strong> Open the patient’s assigned room on the map and verify the correct encounter. Customize supported room labels/layout and documentation preferences.</li>
+      <li><strong>Bring the information together.</strong> Listen or dictate; paste relevant chart text; capture permitted chart photos or screenshots. Verify readability, encounter association and capture status.</li>
+      <li><strong>Review the integrated encounter.</strong> Iris combines the supplied information into the encounter workspace and supports clinical reasoning, differential considerations and MDM drafting. Correct discrepancies and confirm the supporting facts.</li>
+      <li><strong>Address what is missing.</strong> Review relevant documentation, medicolegal and quality-measure prompts. Add actual findings, decisions and rationale; do not invent a discussion, examination, treatment or completed measure.</li>
+      <li><strong>Finish in your own style.</strong> Refine the supported note sections, wording and rules; review the entire output, then copy the approved sections into the EHR. The physician controls clinical decisions and personally approves/signs the final record.</li>
+    </ol>
+
+    <figure>
+      <svg viewBox="0 0 800 380" role="img" aria-labelledby="map-t map-d">
+        <title id="map-t">Illustrative room map diagram</title>
+        <desc id="map-d">A schematic grid of labeled rooms, one highlighted, with arrows leading from capture inputs to an encounter workspace and then to physician review. Illustrative only; not a screenshot of the application.</desc>
+        <rect width="800" height="380" fill="#f2f9fa"/>
+        <text x="20" y="30" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#0b4d5c">Room map</text>
+        <g font-family="system-ui,sans-serif" font-size="15" text-anchor="middle">
+          <rect x="20" y="48" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="75" y="93" fill="#06323d">Room A</text>
+          <rect x="145" y="48" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="200" y="93" fill="#06323d">Room B</text>
+          <rect x="270" y="48" width="110" height="80" rx="10" fill="#f5e2b0" stroke="#d9a93f" stroke-width="4"/><text x="325" y="93" fill="#06323d" font-weight="700">Room C</text>
+          <rect x="20" y="143" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="75" y="188" fill="#06323d">Room D</text>
+          <rect x="145" y="143" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="200" y="188" fill="#06323d">Room E</text>
+          <rect x="270" y="143" width="110" height="80" rx="10" fill="#fff" stroke="#126577" stroke-width="2"/><text x="325" y="188" fill="#06323d">Room F</text>
+        </g>
+        <text x="20" y="250" font-family="system-ui,sans-serif" font-size="13" fill="#43595f">Example labels only; supported labels and layout are customizable.</text>
+        <g font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">
+          <rect x="420" y="48" width="170" height="44" rx="8" fill="#0b4d5c"/><text x="505" y="75" fill="#fff">Listen / dictate</text>
+          <rect x="420" y="102" width="170" height="44" rx="8" fill="#0b4d5c"/><text x="505" y="129" fill="#fff">Pasted chart text</text>
+          <rect x="420" y="156" width="170" height="44" rx="8" fill="#0b4d5c"/><text x="505" y="183" fill="#fff">Photos / screenshots</text>
+          <rect x="620" y="70" width="160" height="110" rx="12" fill="#06323d" stroke="#d9a93f" stroke-width="3"/>
+          <text x="700" y="115" fill="#f5e2b0" font-weight="700">Encounter</text>
+          <text x="700" y="135" fill="#f5e2b0" font-weight="700">workspace</text>
+          <rect x="620" y="250" width="160" height="60" rx="12" fill="#fff" stroke="#d9a93f" stroke-width="3"/>
+          <text x="700" y="276" fill="#06323d" font-weight="700">Physician review</text>
+          <text x="700" y="296" fill="#06323d">and approval</text>
+        </g>
+        <g stroke="#d9a93f" stroke-width="3" fill="none" stroke-linecap="round">
+          <path d="M380 88 H410"/><path d="M590 70 L610 110"/><path d="M590 124 H610"/><path d="M590 178 L610 140"/>
+          <path d="M700 180 V240"/><path d="M692 232 L700 244 L708 232"/>
+        </g>
+        <text x="20" y="360" font-family="system-ui,sans-serif" font-size="13" fill="#7a5a12" font-weight="700">ILLUSTRATIVE DIAGRAM — NOT A SCREENSHOT OF THE APPLICATION. NO PATIENT DATA.</text>
+      </svg>
+      <figcaption>Illustrative room-map and workflow diagram drawn for this page. It is not a real app screenshot.</figcaption>
+    </figure>
+
+    <p class="note">Make the workflow yours: tailor the supported note structure, style, rules and room settings. Review the integrated information, drafts and quality prompts, then personally approve the final record. Available functions depend on the version and configuration.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h">Follow along or get in touch</h2>
+    <p>Follow Aural Iris for product and workflow updates, or get in touch about the platform.</p>
+    <p><strong>Please do not send patient information or any protected health information by email.</strong></p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.youtube.com/@auralirisapp" rel="noopener">Visit our YouTube channel</a>
+      <a class="btn secondary" href="mailto:auralirisapp@gmail.com?subject=Aural%20Iris%20business%20inquiry">Email: business inquiries</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Aural Iris LLC.</strong> Informational page only.</p>
+    <p>Aural Iris supports physician review and does not replace clinical judgment. The physician retains final clinical approval and signature. No real clinical example or screenshot is used on this page.</p>
+    <p>This site has no forms, tracking or analytics.</p>
+  </div>
+</footer>
+</body>
+</html>
