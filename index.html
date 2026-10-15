@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -87,11 +87,11 @@ header.site{background:var(--teal-900);color:#fff}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.02em}
 .brand img{width:44px;height:44px;border-radius:10px}
-nav a{color:var(--gold-200);text-decoration:none;margin-left:1.25rem;font-size:.97rem}
+nav a{color:var(--gold-200);text-decoration:none;margin-left:.5rem;font-size:.97rem;display:inline-block;padding:.7rem .6rem;min-height:44px}
 nav a:hover{text-decoration:underline}
 .hero{background:radial-gradient(circle at 80% 20%,var(--teal-700),var(--teal-900) 65%);color:#fff;padding:4rem 0 4.5rem}
 .hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:2.5rem;align-items:center}
-.eyebrow{color:var(--gold-400);text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;font-weight:700;margin:0 0 .75rem}
+.eyebrow{color:var(--gold-400);text-transform:uppercase;letter-spacing:.14em;font-size:.875rem;font-weight:700;margin:0 0 .75rem}
 h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.1;margin:0 0 1rem}
 h1 span{color:var(--gold-400)}
 .lede{font-size:1.2rem;color:#dcecef;max-width:38em;margin:0 0 1.75rem}
@@ -132,7 +132,7 @@ footer a{color:var(--gold-200)}
   .hero .wrap{grid-template-columns:1fr}
   .hero-logo{order:-1}
   .hero-logo img{width:150px}
-  nav a{margin-left:.9rem}
+  nav a{margin-left:0}
   ol.steps li{padding-left:3.6rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -149,7 +149,7 @@ ol.steps.flow p{font-size:1rem;color:var(--muted);margin:.6rem 0 0}
 .room-preview h3{font-size:1.65rem;color:var(--teal-800);margin:0 0 .5rem;line-height:1.2}
 .room-preview p{color:var(--muted)}
 .room-preview figure{margin:0}
-.room-preview figcaption{font-size:.85rem}
+.room-preview figcaption{font-size:.9rem}
 @media(max-width:760px){ol.steps.flow{grid-template-columns:1fr}ol.steps.flow li:not(:last-child)::after{display:none}.room-preview{grid-template-columns:1fr;gap:1rem}.hero{padding:2.5rem 0 3rem}.hero-logo{order:0}.hero-logo img{width:120px}.hero .wrap{gap:1.5rem}section{padding:2.5rem 0}}
 </style>
 </head>
