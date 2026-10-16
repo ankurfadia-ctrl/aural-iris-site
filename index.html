@@ -104,7 +104,7 @@ p{margin:0;color:var(--muted);text-wrap:pretty;max-width:66ch}
 .secondary:hover{background:#154650;border-color:var(--light-gold)}
 .hero-visual{min-width:0;position:relative;display:grid;place-items:center;aspect-ratio:1}
 .hero-art{display:block;width:100%;max-width:536px;height:auto;overflow:visible}
-.hero-art :is(.iris-blades,.blade-reveal,.iris-halo,.core-glow,.core-reveal,.core-ripple,.orbit,.ring-comet){transform-box:view-box;transform-origin:50% 50%}
+.hero-art :is(.iris-blades,.blade-reveal,.iris-halo,.core-glow,.core-reveal,.core-ripple,.orbit,.ring-comet){transform-box:view-box;transform-origin:240px 240px}
 .pulse-sweep,.core-ripple{display:none}
 .section{padding-block:clamp(56px,5.6vw,88px)}
 .section-head{margin-bottom:40px;display:flex;align-items:center;gap:32px}
@@ -202,6 +202,7 @@ footer .company{color:var(--paper)}
 @media(max-width:419px){.cta{flex-direction:column;align-items:stretch}.hero .btn{width:100%}}
 @media(min-width:700px) and (max-width:899px){.inputs .split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}}
 @media(max-width:400px){.input-source{gap:6px}.input-source svg{width:22px;height:22px}}
+@media(max-width:300px){.input-map{grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:0;padding-right:0}.input-connectors{display:none}.input-source{height:auto;min-height:44px;padding-block:6px}.input-iris{grid-column:1;grid-row:auto;justify-self:start;margin-top:12px}}
 @media(prefers-reduced-motion:no-preference){
 html{scroll-behavior:smooth}
 .btn,nav a{transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s}
