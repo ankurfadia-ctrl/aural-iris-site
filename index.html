@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aural Iris | AI Medical Scribe for Emergency Physicians</title>
-<meta name="description" content="Aural Iris is an AI medical scribe built by a physician trained in emergency medicine, internal medicine and cardiology. Draft ED notes and MDM in your style.">
+<title>Aural Iris | AI Clinical Assistant for Physicians</title>
+<meta name="description" content="Focus on your patient; Iris handles the chart. Aural Iris is an AI clinical assistant built by a physician trained in emergency medicine, internal medicine and cardiology.">
 <link rel="canonical" href="https://auraliris.com/">
 <meta name="theme-color" content="#0b4d5c">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aural Iris">
-<meta property="og:title" content="Aural Iris | AI Medical Scribe for Emergency Physicians">
-<meta property="og:description" content="Aural Iris is an AI medical scribe built by a physician trained in emergency medicine, internal medicine and cardiology. Draft ED notes and MDM in your style.">
+<meta property="og:title" content="Aural Iris | AI Clinical Assistant for Physicians">
+<meta property="og:description" content="Focus on your patient; Iris handles the chart. Aural Iris is an AI clinical assistant built by a physician trained in emergency medicine, internal medicine and cardiology.">
 <meta property="og:url" content="https://auraliris.com/">
 <meta property="og:image" content="https://auraliris.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Aural Iris logo with the text AI medical scribe for emergency physicians. Built by a physician trained in emergency medicine, internal medicine and cardiology.">
+<meta property="og:image:alt" content="Aural Iris. Focus on your patient. Iris handles the rest. AI clinical assistant for physicians. Built by a physician trained in emergency medicine, internal medicine and cardiology.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aural Iris | AI Medical Scribe for Emergency Physicians">
-<meta name="twitter:description" content="Aural Iris is an AI medical scribe built by a physician trained in emergency medicine, internal medicine and cardiology. Draft ED notes and MDM in your style.">
+<meta name="twitter:title" content="Aural Iris | AI Clinical Assistant for Physicians">
+<meta name="twitter:description" content="Focus on your patient; Iris handles the chart. Aural Iris is an AI clinical assistant built by a physician trained in emergency medicine, internal medicine and cardiology.">
 <meta name="twitter:image" content="https://auraliris.com/assets/og-image.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -49,7 +49,7 @@
       "@id": "https://auraliris.com/#app",
       "name": "Aural Iris",
       "url": "https://auraliris.com/",
-      "description": "Aural Iris is an AI medical scribe built by a physician trained in emergency medicine, internal medicine and cardiology. Draft ED notes and MDM in your style.",
+      "description": "Focus on your patient; Iris handles the chart. Aural Iris is an AI clinical assistant built by a physician trained in emergency medicine, internal medicine and cardiology.",
       "applicationCategory": "MedicalApplication",
           "image": "https://auraliris.com/assets/og-image.png",
       "publisher": {
@@ -60,131 +60,176 @@
 }
 </script>
 <style>
-:root{--ink:#06323d;--teal:#0b4d5c;--muted:#43595f;--paper:#fffdf8;--line:#ccd7d5;--gold:#d9a93f}
+:root{--ink:#06323d;--teal:#0b4d5c;--muted:#486168;--paper:#fffdf8;--tint:#eef2ed;--line:#cbd5ce;--gold:#d9a93f;--light-gold:#e6bd5c;--serif:ui-serif,Georgia,"Iowan Old Style","Palatino Linotype",serif}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
-body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+html{scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
-a{color:var(--teal);text-underline-offset:.25em}
-a:focus-visible{outline:3px solid #126577;outline-offset:5px}
-.skip{position:absolute;left:1rem;top:1rem;transform:translateY(-180%);z-index:10;background:var(--ink);color:white;padding:.75rem 1rem;min-height:44px}
+a{color:inherit;text-underline-offset:.3em}
+a:focus-visible{outline:3px solid #956211;outline-offset:5px}
+.dark a:focus-visible{outline-color:var(--light-gold)}
+.skip{position:absolute;top:16px;left:16px;z-index:30;transform:translateY(-200%);padding:12px 16px;min-height:48px;background:var(--paper);color:var(--ink)}
 .skip:focus{transform:none}
-.wrap{width:min(1120px,calc(100% - 3rem));margin-inline:auto}
-.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding-block:1.25rem;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;font-size:1.125rem;font-weight:650;min-height:44px}
-.brand img{width:44px;height:44px;border-radius:22.5%}
-nav{display:flex;flex-wrap:wrap;gap:0 1.25rem}
-nav a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;text-decoration:none;font-size:.875rem}
-nav a:hover{text-decoration:underline}
-h1,h2{font-family:ui-serif,Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:400;letter-spacing:-.035em;line-height:1.12;text-wrap:balance}
-h1{font-size:clamp(2.5rem,5.2vw,4.5rem);margin:0;max-width:15ch}
-h2{font-size:clamp(2rem,3.3vw,2.8rem);margin:0 0 2rem}
-h3{font-size:1rem;line-height:1.4;margin:0 0 .5rem;font-weight:650}
-p{margin:0;color:var(--muted)}
-.hero{padding-block:clamp(3rem,7vw,6.5rem)}
-.hero .wrap{display:grid;gap:2.5rem;align-items:center}
-.tagline{font-size:1rem;color:var(--teal);margin-bottom:1.25rem;padding-left:1rem;border-left:3px solid var(--gold)}
-.lede{font-size:1.125rem;margin-top:1.5rem}
-.credential{max-width:46ch;font-size:1rem;color:var(--teal);margin-top:1rem}
-.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
-.btn{display:inline-flex;justify-content:center;align-items:center;min-height:48px;min-width:44px;padding:.65rem 1.15rem;border:1px solid var(--teal);border-radius:5px;text-decoration:none;font-size:.875rem;font-weight:600}
-.primary{color:var(--paper);background:var(--teal)}
-.primary:hover{background:var(--ink)}
-.secondary:hover{background:#e8eeeb}
-.hero-logo{display:none;width:120px;border-radius:22.5%}
-section{padding-block:clamp(2.75rem,5vw,4.5rem);border-top:1px solid var(--line)}
-#workflow{background:#f0f4f1}
-.steps{list-style:none;padding:0;margin:0;display:grid;gap:2rem;counter-reset:step}
-.steps li{counter-increment:step}
-.steps li::before{content:"0" counter(step);display:block;font-size:.875rem;color:var(--teal);margin-bottom:.75rem}
-.features{display:grid;gap:1.5rem 3rem}
-.feature{padding-top:1.25rem;border-top:1px solid var(--line)}
-.faq-list{display:grid;gap:1.5rem}
-.faq-item{display:grid;gap:.25rem}
-.contact-layout{display:grid;gap:1.5rem}
-.contact-layout h2{margin-bottom:.75rem}
-.contact-layout .btn{justify-self:start;align-self:center}
-.warning{font-size:.875rem;max-width:64ch;margin-top:.75rem}
-footer{background:var(--ink);padding-block:2.5rem;font-size:.875rem}
-footer p{color:#d9e4e3;margin-top:.85rem;max-width:112ch}
-.legal-badges{display:flex;flex-wrap:wrap;gap:.35rem 1.5rem;color:#e6bd5c;margin-bottom:1.25rem;font-size:.875rem}
-@media(min-width:700px){.hero .wrap{grid-template-columns:minmax(0,1fr) auto}.hero-logo{display:block;width:clamp(160px,24vw,280px)}.steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem}.features{grid-template-columns:repeat(2,minmax(0,1fr))}.feature:last-child{grid-column:1/-1}.feature:last-child p{max-width:72ch}.faq-item{grid-template-columns:1fr 2fr;gap:2rem}.contact-layout{grid-template-columns:1fr auto;gap:3rem}}
-@media(max-width:399px){.wrap{width:calc(100% - 2rem)}nav{gap:0 .8rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.skip:focus-visible{outline-color:var(--light-gold);box-shadow:0 0 0 8px var(--ink)}
+.wrap{width:min(1280px,calc(100% - clamp(40px,8vw,128px)));margin-inline:auto}
+.dark{background:var(--ink);color:var(--paper)}
+.site{z-index:20}
+.site .wrap{min-height:88px;display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid #31535a}
+.brand{display:inline-flex;align-items:center;gap:16px;min-height:48px;text-decoration:none;white-space:nowrap}
+.brand img{width:40px;height:40px;border-radius:22.5%}
+.wordmark{font-size:24px;letter-spacing:-.045em;font-weight:500}
+.wordmark span{color:var(--light-gold)}
+nav{display:flex;gap:clamp(16px,2.5vw,40px)}
+nav a{display:flex;align-items:center;min-height:48px;min-width:44px;font-size:14px;text-decoration:none;color:#e1e8e5;box-shadow:inset 0 -1px transparent}
+nav a:hover{color:var(--light-gold);box-shadow:inset 0 -1px var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.045em;line-height:1.06;margin:0;text-wrap:balance}
+h1{font-size:clamp(44px,4.55vw,68px)}
+h1 span{display:block;color:#c5d8d5}
+h2{font-size:clamp(36px,3.5vw,52px)}
+h3{text-wrap:balance;font-size:17px;line-height:1.4;font-weight:600;margin:0}
+p{margin:0;color:var(--muted);text-wrap:pretty;max-width:66ch}
+.hero{padding-block:clamp(56px,6vw,88px) clamp(64px,7vw,104px);overflow:hidden;position:relative}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);align-items:center;gap:24px}
+.hero-copy{position:relative;z-index:1}
+.tagline{display:flex;align-items:center;gap:16px;color:var(--light-gold);font-size:14px;letter-spacing:.04em;margin-bottom:32px}
+.tagline:before{content:"";width:32px;height:1px;background:var(--gold);flex-shrink:0}
+.lede{font-size:clamp(18px,1.4vw,20px);line-height:1.6;max-width:46ch;margin-top:24px;color:#e1e8e5}
+.credential{max-width:49ch;margin-top:24px;color:#c5d8d5;font-size:16px;line-height:1.65}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+.btn{min-height:52px;min-width:44px;padding:14px 24px;border:1px solid transparent;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;gap:16px;font-size:14px;font-weight:600;text-decoration:none;line-height:1.5}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+.primary{background:var(--light-gold);color:var(--ink)}
+.primary:hover{background:#f5d588;box-shadow:0 4px 24px #e6bd5c20}
+.secondary{border-color:#8da7a9;color:var(--paper)}
+.secondary:hover{background:#154650;border-color:var(--light-gold)}
+.hero-visual{min-width:0;position:relative;display:grid;place-items:center;aspect-ratio:1}
+.hero-art{display:block;width:112%;max-width:536px;flex-shrink:0;overflow:visible}
+.section{padding-block:clamp(56px,5.6vw,88px)}
+.section-head{margin-bottom:40px;display:flex;align-items:center;gap:32px}
+.section-head:after{content:"";height:1px;flex:1;background:var(--line)}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;margin:0;padding:0;gap:0}
+.steps li{position:relative;padding-right:24px}
+.steps li:before{content:"";position:absolute;top:23px;left:0;right:0;height:1px;background:#a5b9b7;transform-origin:left top}
+.steps li:last-child{padding-right:0}
+.steps li:last-child:before{display:none}
+.node{position:relative;display:grid;place-items:center;width:48px;height:48px;background:var(--paper);border:1px solid #8ca6a5;border-radius:50%;font:20px/1 var(--serif);margin-bottom:24px}
+.steps li:last-child .node{background:var(--ink);border-color:var(--ink);color:var(--light-gold);box-shadow:0 0 0 6px #d9a93f18}
+.steps h3{margin-bottom:8px}
+.steps p{font-size:16px;line-height:1.65;max-width:24ch}
+.chart{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2.1fr;gap:40px}
+.chart h3{font-family:var(--serif);font-size:32px;font-weight:400;letter-spacing:-.035em;line-height:1.15;text-wrap:balance}
+.chart-intro p{font-size:16px;margin-top:16px;max-width:24ch}
+.chart-index{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px}
+.chart-index li{font-size:16px;padding:16px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:8px}
+.chart-index li:before{content:"";display:block;width:4px;height:4px;background:#a77b28;flex-shrink:0}
+.chart-detail{font-size:16px;max-width:66ch}
+.inputs{background:var(--tint)}
+.split{display:grid;grid-template-columns:.85fr 1.4fr;gap:clamp(40px,6vw,88px)}
+.intro p{margin-top:24px}
+.intro:before,.platform-copy:before,.emr-copy:before,.section-head h2:before,.faq h2:before,.contact h2:before{content:"";display:block;width:32px;height:2px;background:var(--gold);margin-bottom:24px}
+.input-list{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:0;padding:0;list-style:none}
+.input-list li{display:flex;align-items:center;gap:16px;padding:24px 0;border-top:1px solid #bccbc3;font-size:16px;line-height:1.5}
+.input-list li:last-child{grid-column:1/-1}
+.input-list svg{width:24px;height:24px;flex-shrink:0;color:var(--teal);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:currentColor}
+.emr .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.emr p{max-width:49ch;margin-top:24px;color:#c5d8d5}
+.emr-strip{--emr-node:92px;--emr-pad:32px;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:16px;margin:0;padding:var(--emr-pad) 0;list-style:none}
+.emr-strip:before{content:"";position:absolute;top:calc(var(--emr-pad) + var(--emr-node)/2);left:16.66%;right:16.66%;height:1px;background:#b18c3f}
+.emr-stop{position:relative;text-align:center;display:grid;justify-items:center;gap:16px;font-size:16px;color:var(--paper)}
+.emr-icon{width:var(--emr-node);height:var(--emr-node);display:grid;place-items:center;background:var(--ink);border:1px solid #658080;border-radius:50%;position:relative}
+.emr-icon svg{width:37px;height:37px;fill:none;stroke:#e6bd5c;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.emr-stop:nth-child(2) .emr-icon{border-color:var(--light-gold);box-shadow:0 0 0 8px #e6bd5c0b}
+.emr-stop:nth-child(2){color:var(--paper)}
+.platform .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.platform p{margin-top:24px;max-width:49ch}
+.platform .ai-line{margin-top:32px;padding-left:16px;border-left:2px solid var(--gold);color:var(--teal);font-size:16px}
+.hub{position:relative;display:grid;grid-template-columns:36% 28% 36%;grid-template-rows:44px 144px 44px;align-items:center;justify-items:center;width:100%;margin-inline:auto}
+.hub-connectors{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#77958e;stroke-width:1.5;pointer-events:none}
+.hub-connectors path{vector-effect:non-scaling-stroke}
+.hub-center{grid-column:2;grid-row:2;position:relative;z-index:1;padding:20px;background:var(--paper);border:1px solid #a77b28;border-radius:50%;box-shadow:0 0 0 10px var(--paper),0 0 0 11px #d9a93f55}
+.hub-center img{width:64px;height:64px;border-radius:22.5%}
+.facet{position:relative;z-index:1;width:100%;height:44px;display:flex;align-items:center;justify-content:center;gap:8px;padding-inline:8px;border:1px solid #77958e;border-radius:3px;background:var(--paper);font-size:16px;line-height:1.25}
+.facet:before{content:"";width:5px;height:5px;flex-shrink:0;border-radius:50%;background:#a77b28}
+.facet-a{grid-column:1;grid-row:1}.facet-b{grid-column:3;grid-row:1}.facet-c{grid-column:1;grid-row:3}.facet-d{grid-column:3;grid-row:3}
+.hub-captions{display:flex;justify-content:center;gap:32px;margin-top:24px;color:var(--muted);font-size:16px}
+.hub-captions span{display:flex;gap:8px;align-items:center}
+.hub-captions span:before{content:"";width:5px;height:5px;border-radius:50%;background:#a77b28}
+.faq{background:var(--tint)}
+.faq-list{margin:0}
+.faq-item{padding-block:24px;border-top:1px solid #bccbc3}
+.faq-item:first-child{padding-top:0;border-top:0}
+.faq-item:last-child{padding-bottom:0}
+.faq-item p{font-size:16px;margin-top:8px}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
+.contact h2{max-width:12ch}
+.contact p{color:#c5d8d5}
+.contact .btn{margin-top:24px}
+.contact .warning{max-width:50ch;font-size:14px;margin-top:24px;color:#bacecc}
+footer{padding-block:32px 40px;border-top:1px solid #31535a;font-size:14px}
+.footer-top{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:24px}
+.footer-top .wordmark{font-size:24px}
+.legal-labels{display:flex;flex-wrap:wrap;gap:16px 24px;color:#c5d8d5}
+.legal-labels span+span{padding-left:24px;border-left:1px solid #547079}
+footer p{font-size:14px;color:#bacecc;max-width:100ch;margin-top:16px;line-height:1.7}
+footer .company{color:var(--paper)}
+@media(min-width:1100px){html{scroll-padding-top:112px}.site{position:sticky;top:0}}
+@media(min-width:900px) and (max-width:1099px){h1{font-size:clamp(40px,4.5vw,50px)}.hero-grid{gap:16px}.hero-art{width:108%}.hero .btn{padding-inline:16px}.hero .cta{gap:8px}}
+@media(max-width:1099px){.steps{grid-template-columns:1fr;gap:24px}.steps li{padding:0 0 0 80px;min-height:64px;display:grid;grid-template-columns:144px 1fr;align-items:start;gap:24px}.steps li:last-child{padding-right:0}.steps li:before{left:23px;top:24px;bottom:-48px;width:1px;height:auto;right:auto}.node{position:absolute;left:0;top:0;margin:0}.steps h3{padding-top:8px;margin:0}.steps p{max-width:48ch;padding-top:8px}.split,.emr .wrap,.platform .wrap,.contact .wrap{gap:40px}.chart{grid-template-columns:1fr 2fr;gap:32px}.chart-index{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-center{padding:16px}.hub-center img{width:48px;height:48px}.hub-captions{gap:16px}.input-list{gap:0 16px}.input-list li{gap:8px}}
+@media(max-width:899px){.hero{padding-bottom:0}.hero-grid{grid-template-columns:1fr;gap:0}.hero-copy{max-width:680px}h1{font-size:clamp(42px,6.5vw,56px)}.hero-visual{aspect-ratio:auto;height:192px;width:100%;display:block;margin-top:24px}.hero-art{position:absolute;width:360px;max-width:none;right:-40px;top:-32px}.split{grid-template-columns:.8fr 1.3fr}.input-list{grid-template-columns:1fr}.input-list li:last-child{grid-column:auto}.emr .wrap,.platform .wrap{grid-template-columns:1fr 1fr;gap:32px}.emr-strip{--emr-node:74px;gap:8px}.facet{padding-inline:4px}.hub-captions{gap:16px}}
+@media(max-width:699px){h1{font-size:clamp(36px,9.75vw,52px);letter-spacing:-.05em}.site .wrap{flex-direction:column;align-items:flex-start;gap:8px;padding-block:16px 8px}.brand img{width:36px;height:36px}.wordmark{font-size:22px}nav{width:100%;justify-content:space-between;gap:8px}nav a{font-size:14px;min-height:48px}.hero{padding-top:40px}.tagline{margin-bottom:24px}.lede{margin-top:24px}.credential{margin-top:24px}.cta{gap:16px;margin-top:32px}.btn{padding-inline:16px}.hero-visual{height:168px;margin-top:32px}.hero-art{width:288px;top:-24px;right:-48px}.section-head{margin-bottom:32px;gap:24px}.steps{gap:24px}.steps li{display:block;padding-left:68px;min-height:96px}.steps h3{padding-top:8px;margin-bottom:8px}.steps p{padding:0;max-width:32ch}.steps li:before{bottom:-48px}.chart{grid-template-columns:1fr;gap:24px;margin-top:40px;padding-top:32px}.chart-intro p{max-width:32ch}.chart-index{gap:0 16px}.chart-index li{font-size:16px;padding-block:16px}.split,.emr .wrap,.platform .wrap,.contact .wrap{grid-template-columns:1fr;gap:32px}.input-list{grid-template-columns:1fr}.input-list li{padding-block:24px;gap:16px}.intro p{margin-top:16px}.emr-strip{--emr-pad:8px;padding-bottom:0;gap:16px}.emr-stop{gap:16px}.hub{max-width:420px}.hub-captions{margin-top:16px;gap:24px}.platform .ai-line{margin-top:24px}.footer-top{align-items:flex-start;flex-direction:column;gap:16px}.legal-labels{gap:8px 16px}.legal-labels span+span{padding-left:16px}footer{padding-block:32px}.contact h2{max-width:none}}
+@media(min-width:700px) and (max-width:899px){.hero{padding-bottom:64px}.hero-grid{position:relative;display:block}.hero-copy{width:60%;max-width:none}h1{font-size:clamp(38px,5.3vw,46px)}.hero-visual{position:absolute;top:40px;right:-112px;width:clamp(360px,48vw,420px);height:auto;aspect-ratio:1;margin:0;pointer-events:none}.hero-art{position:static;width:100%}.hero .cta{gap:12px}.hero .btn{padding-inline:16px}}
+@media(max-width:419px){.cta{flex-direction:column;align-items:stretch}.hero .btn{width:100%}}
+@media(prefers-reduced-motion:no-preference){
+html{scroll-behavior:smooth}
+.btn,nav a{transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s}
+.iris-blades{transform-origin:240px 240px;animation:iris-breathe 32s ease-in-out infinite alternate}
+.pulse-light{stroke-dasharray:24 160;animation:pulse-sweep 8s ease-in-out infinite}
+.steps li:before{animation:line-arrive 1.2s ease-out both}
+.steps .node{animation:node-arrive .8s ease-out both}
+.steps li:nth-child(2) .node{animation-delay:.1s}.steps li:nth-child(3) .node{animation-delay:.2s}.steps li:nth-child(4) .node{animation-delay:.3s}.steps li:nth-child(5) .node{animation-delay:.4s}
+.emr-strip:after{content:"";position:absolute;top:calc(var(--emr-pad) + var(--emr-node)/2 - 2px);left:16.66%;height:5px;width:5px;background:#f5d588;border-radius:50%;box-shadow:0 0 8px #e6bd5c;animation:chart-travel 9s ease-in-out infinite}
+@keyframes iris-breathe{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+@keyframes pulse-sweep{0%,35%{stroke-dashoffset:184;opacity:.25}65%,100%{stroke-dashoffset:0;opacity:1}}
+@keyframes line-arrive{from{scale:.01}to{scale:1}}
+@keyframes node-arrive{from{transform:translateY(8px)}to{transform:translateY(0)}}
+@keyframes chart-travel{0%,15%{left:16.66%;opacity:0}25%,75%{opacity:1}85%,100%{left:83.33%;opacity:0}}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<header class="site" id="top">
-  <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/aural-iris-logo.png" alt="Aural Iris logo" width="44" height="44"><span>Aural Iris&trade;</span></a>
-    <nav aria-label="Primary"><a href="#workflow">How it works</a><a href="#what">What Iris handles</a><a href="#contact">Contact</a></nav>
-  </div>
-</header>
+<header class="site dark" id="top"><div class="wrap">
+<a class="brand" href="#top" aria-label="Aural Iris home"><img src="assets/aural-iris-logo.png" alt="Aural Iris logo" width="42" height="42"><span class="wordmark"><span>A</span>ural <span>I</span>ris&trade;</span></a>
+<nav aria-label="Primary"><a href="#how">How it works</a><a href="#inputs">Inputs</a><a href="#platform">Platform</a><a href="#contact">Contact</a></nav>
+</div></header>
 <main id="main">
-  <div class="hero">
-    <div class="wrap">
-      <div>
-        <p class="tagline">Every minute, reclaimed.&trade;</p>
-        <h1>Focus on the patient.<br>Let Iris draft the note.</h1>
-        <p class="lede">The entire note, in your style.</p>
-        <p class="credential">Built by a physician trained in emergency medicine, internal medicine and cardiology.</p>
-        <div class="cta"><a class="btn primary" href="#workflow">See how it works</a><a class="btn secondary" href="mailto:auralirisapp@gmail.com?subject=Aural%20Iris%20business%20inquiry">Business inquiries</a></div>
-      </div>
-      <img class="hero-logo" src="assets/aural-iris-logo.png" alt="Aural Iris logo" width="280" height="280">
-    </div>
-  </div>
-  <section id="workflow" aria-labelledby="workflow-title">
-    <div class="wrap">
-      <h2 id="workflow-title">How it works</h2>
-      <ol class="steps">
-        <li><h3>Capture</h3><p>Record the visit, dictate, paste chart details or add a photo.</p></li>
-        <li><h3>Let Iris work</h3><p>Iris drafts the entire note.</p></li>
-        <li><h3>Review. Copy. Done.</h3><p>Review, edit, copy into your EHR for your final approval and signature.</p></li>
-      </ol>
-    </div>
-  </section>
-  <section id="what" aria-labelledby="what-title">
-    <div class="wrap">
-      <h2 id="what-title">What Iris handles</h2>
-      <div class="features">
-        <div class="feature"><h3>The complete note</h3><p>HPI, ROS, physical exam, procedures, MDM, critical care time, diagnoses and disposition.</p></div>
-        <div class="feature"><h3>MDM detail</h3><p>Written with medicolegal detail, quality-measure (MIPS) prompts and prompts for missing information.</p></div>
-        <div class="feature"><h3>Fits your EMR</h3><p>Formatted for your hospital's EMR. New EMRs can be added.</p></div>
-        <div class="feature"><h3>Your note, your style</h3><p>Customize note sections, wording and workflow preferences.</p></div>
-        <div class="feature"><h3>Time to first draft</h3><p>On the founder's own ED shifts, Iris had the complete first draft ready a median of 76 seconds after the last recording (243 encounters).</p></div>
-      </div>
-    </div>
-  </section>
-  <section id="faq" aria-labelledby="faq-title">
-    <div class="wrap">
-      <h2 id="faq-title">FAQ</h2>
-      <div class="faq-list">
-        <div class="faq-item"><h3>What is Iris?</h3><p>An AI medical scribe for emergency physicians.</p></div>
-        <div class="faq-item"><h3>Who built Iris?</h3><p>Built by a physician trained in emergency medicine, internal medicine and cardiology.</p></div>
-        <div class="faq-item"><h3>Who signs?</h3><p>You do. You review and edit the note, then give final approval and signature.</p></div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" aria-labelledby="contact-title">
-    <div class="wrap contact-layout">
-      <div><h2 id="contact-title">Contact</h2><p>For business inquiries.</p><p class="warning">Please do not send patient information or any protected health information by email.</p></div>
-      <a class="btn primary" href="mailto:auralirisapp@gmail.com?subject=Aural%20Iris%20business%20inquiry">Email us</a>
-    </div>
-  </section>
+<div class="hero dark"><div class="wrap hero-grid"><div class="hero-copy">
+<p class="tagline">Every minute, reclaimed.&trade;</p>
+<h1>Focus on your patient.<span>Iris handles the rest.</span></h1>
+<p class="lede">Your AI clinical assistant for the documentation, the chart and the busywork.</p>
+<p class="credential">Built by a physician trained in emergency medicine, internal medicine and cardiology.</p>
+<div class="cta"><a class="btn primary" href="#how">See how it works<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a><a class="btn secondary" href="mailto:auralirisapp@gmail.com?subject=Aural%20Iris%20business%20inquiry">Business inquiries</a></div>
+</div><div class="hero-visual" aria-hidden="true"><svg class="hero-art" viewBox="0 0 480 480" fill="none" aria-hidden="true"><defs><linearGradient id="blade-gold" x1="166" y1="93" x2="288" y2="232" gradientUnits="userSpaceOnUse"><stop stop-color="#fff0b7"/><stop offset=".3" stop-color="#e6bd5c"/><stop offset=".7" stop-color="#bb8730"/><stop offset="1" stop-color="#795623"/></linearGradient><radialGradient id="iris-halo"><stop offset=".36" stop-color="#efc66c" stop-opacity=".18"/><stop offset=".74" stop-color="#d9a93f" stop-opacity=".06"/><stop offset="1" stop-color="#d9a93f" stop-opacity="0"/></radialGradient><radialGradient id="iris-core"><stop stop-color="#15505a"/><stop offset="1" stop-color="#06323d"/></radialGradient><filter id="inner-light" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><path id="iris-crescent" d="M160 103C250 50 356 86 396 178C353 139 296 123 246 142C196 161 169 202 174 249C133 216 121 155 160 103Z" fill="url(#blade-gold)" stroke="#fff0b7" stroke-opacity=".7" stroke-width=".9" stroke-linejoin="round"/></defs><circle cx="240" cy="240" r="238" fill="url(#iris-halo)"/><circle cx="240" cy="240" r="218" stroke="#8c804f" stroke-opacity=".55"/><circle cx="240" cy="240" r="202" stroke="#c2a35b" stroke-opacity=".55" stroke-dasharray="1 12"/><path d="M240 22a218 218 0 0 1 218 218M240 458A218 218 0 0 1 22 240" stroke="#e6bd5c" stroke-width="1.5"/><g stroke="#e6bd5c" stroke-opacity=".7"><path d="M240 12v20M448 240h20M240 448v20M12 240h20"/><path d="M240 16v12M452 240h12M240 452v12M16 240h12" transform="rotate(30 240 240)"/><path d="M240 16v12M452 240h12M240 452v12M16 240h12" transform="rotate(60 240 240)"/></g><circle cx="240" cy="240" r="160" stroke="#edc46b" stroke-opacity=".25" stroke-width="14" filter="url(#inner-light)"/><g class="iris-blades"><use href="#iris-crescent" transform="rotate(0 240 240)"/><use href="#iris-crescent" transform="rotate(60 240 240)"/><use href="#iris-crescent" transform="rotate(120 240 240)"/><use href="#iris-crescent" transform="rotate(180 240 240)"/><use href="#iris-crescent" transform="rotate(240 240 240)"/><use href="#iris-crescent" transform="rotate(300 240 240)"/></g><circle cx="240" cy="240" r="62" fill="url(#iris-core)" stroke="#e6bd5c" stroke-width="1.2"/><path d="M234 198h12v16h16v12h-16v16h-12v-16h-16v-12h16Z" fill="#e6bd5c" fill-opacity=".85" stroke="#fff0b7" stroke-opacity=".8"/><path d="M202 265h22l8-14 12 28 10-20h24" stroke="#e6bd5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path class="pulse-light" d="M202 265h22l8-14 12 28 10-20h24" stroke="#fff4c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
+<section class="section" id="how" aria-labelledby="how-title"><div class="wrap">
+<div class="section-head"><h2 id="how-title">How it works</h2></div>
+<ol class="steps"><li><span class="node" aria-hidden="true">1</span><h3>Capture</h3><p>Conversations, dictation, notes, images and reports come together.</p></li><li><span class="node" aria-hidden="true">2</span><h3>Organize</h3><p>Encounter details are put in context for the chart.</p></li><li><span class="node" aria-hidden="true">3</span><h3>Draft</h3><p>The complete note is prepared in your own clinical style.</p></li><li><span class="node" aria-hidden="true">4</span><h3>Review</h3><p>You review, edit and verify, with prompts for anything missing.</p></li><li><span class="node" aria-hidden="true">5</span><h3>Into your EMR</h3><p>The verified note is placed into your chart. You sign.</p></li></ol>
+<div class="chart" id="what"><div class="chart-intro"><h3>The complete chart note.</h3><p>Iris prepares the complete chart note:</p></div><div><ul class="chart-index"><li>HPI</li><li>ROS</li><li>Physical exam</li><li>Procedures</li><li>MDM</li><li>Critical care time</li><li>Diagnoses</li><li>Disposition</li></ul><p class="chart-detail">MDM written with medicolegal detail, quality-measure (MIPS) prompts and prompts for missing information. All in your clinical style.</p></div></div>
+</div></section>
+<section class="section inputs" id="inputs" aria-labelledby="inputs-title"><div class="wrap split"><div class="intro"><h2 id="inputs-title">Bring what<br>you have.</h2><p>Iris works with many kinds of input.</p></div><ul class="input-list"><li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M4 5h18v13H12l-5 4v-4H4Z"/><path d="M8 10h10M8 14h6"/></svg><span>Ambient conversation</span></li><li><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="9" y="3" width="8" height="13" rx="4"/><path d="M5 12v1a8 8 0 0 0 16 0v-1M13 21v3M9 24h8"/></svg><span>Dictation</span></li><li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 11v5M7 7v13M11 4v15M15 8v6M18 21l5-5 2 2-5 5-3 1Z"/></svg><span>Quick voice edits</span></li><li><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="2" y="6" width="22" height="14" rx="2"/><path d="M6 10h1m4 0h1m4 0h1m3 0h1M6 14h1m4 0h1m4 0h1M8 17h10"/></svg><span>Typed notes</span></li><li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M8 6H4v18h16v-4M10 2h12v15H10Z M13 6h6m-6 4h6m-6 3h4"/></svg><span>Pasted chart text</span></li><li><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="2" y="4" width="22" height="16" rx="2"/><path d="M6 13h4l2-4 3 7 2-3h3M9 24h8m-4-4v4"/></svg><span>Photos of monitors and chart screens</span></li><li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M6 2h10l5 5v17H6ZM16 2v6h5M10 12h7m-7 4h7m-7 4h4"/></svg><span>Scans and imported reports</span></li></ul></div></section>
+<section class="section emr dark" aria-labelledby="emr-title"><div class="wrap"><div class="emr-copy"><h2 id="emr-title">Works with<br>your EMR.</h2><p>Iris automates the chart work, including placing the reviewed note into your chart. You verify it. Iris never signs and never places orders.</p></div><ol class="emr-strip" aria-label="Reviewed note to chart"><li class="emr-stop"><span class="emr-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h11l6 6v20H8ZM19 3v7h6M12 15h9m-9 5h9m-9 5h5"/></svg></span><span>Note</span></li><li class="emr-stop"><span class="emr-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m7 16 6 6L26 9"/></svg></span><span>You verify</span></li><li class="emr-stop"><span class="emr-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 8h10l3 3h11v17H4ZM8 8V4h17v7M9 18h14m-14 5h9"/></svg></span><span>Chart</span></li></ol></div></section>
+<section class="section platform" id="platform" aria-labelledby="platform-title"><div class="wrap"><div class="platform-copy"><h2 id="platform-title">One platform.<br>Many workflows.</h2><p>Built in emergency medicine, Iris is configurable by clinician, site, specialty and task, with integrations and automations that fit the way you work.</p><p class="ai-line">Aural Iris. A.I. for the work around care.</p></div><div><div class="hub" role="group" aria-label="Iris configuration"><svg class="hub-connectors" viewBox="0 0 100 232" preserveAspectRatio="none" aria-hidden="true"><path d="M18 22 50 116 82 22M18 210 50 116 82 210"/></svg><div class="hub-center"><img src="assets/aural-iris-logo.png" alt="Iris" width="64" height="64"></div><span class="facet facet-a">Clinician</span><span class="facet facet-b">Site</span><span class="facet facet-c">Specialty</span><span class="facet facet-d">Task</span></div><div class="hub-captions"><span>Integrations</span><span>Automations</span></div></div></div></section>
+<section class="section faq" id="faq" aria-labelledby="faq-title"><div class="wrap split"><h2 id="faq-title">FAQ</h2><div class="faq-list">
+<div class="faq-item"><h3>What is Iris?</h3><p>Iris is an AI clinical assistant that handles documentation and chart work so physicians can focus on their patients.</p></div>
+<div class="faq-item"><h3>Who signs?</h3><p>You do. You review, edit and verify everything, then give final approval and signature. Iris never signs and never places orders.</p></div>
+<div class="faq-item"><h3>Who built Iris?</h3><p>Built by a physician trained in emergency medicine, internal medicine and cardiology.</p></div>
+</div></div></section>
+<section class="section contact dark" id="contact" aria-labelledby="contact-title"><div class="wrap"><h2 id="contact-title">Business inquiries</h2><div><p>Let&#39;s talk about Iris.</p><a class="btn primary" href="mailto:auralirisapp@gmail.com?subject=Aural%20Iris%20business%20inquiry">Email us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a><p class="warning">Please do not send patient information or any protected health information by email.</p></div></div></section>
 </main>
-<footer>
-  <div class="wrap">
-    <div class="legal-badges" aria-label="Legal status">
-      <span class="badge">Patent pending</span>
-      <span class="badge">Aural Iris™</span>
-      <span class="badge">Every minute, reclaimed.™</span>
-    </div>
-    <p><strong>Aural Iris LLC</strong> · Informational page only.</p>
-    <p>Physicians review the output and retain final clinical decisions and signature. Features vary by version and settings. Quality prompts do not establish completed MIPS reporting or guarantee payment or legal outcomes.</p>
-    <p>© 2026 Aural Iris LLC. All rights reserved. Aural Iris™, Every minute, reclaimed.™ and the Iris logo are trademarks of Aural Iris LLC. U.S. patent pending.</p>
-    <p>This site has no forms, tracking or analytics.</p>
-  </div>
-</footer>
+<footer class="dark"><div class="wrap"><div class="footer-top"><span class="wordmark"><span>A</span>ural <span>I</span>ris&trade;</span><div class="legal-labels"><span>Patent pending</span><span>Every minute, reclaimed.&trade;</span></div></div>
+<p class="company">Aural Iris LLC &middot; Informational page only.</p>
+<p>Physicians review the output and retain final clinical decisions and signature. Features vary by version and settings. EMR integration depends on the EMR and your setup. Quality prompts do not establish completed MIPS reporting or guarantee payment or legal outcomes.</p>
+<p>&copy; 2026 Aural Iris LLC. All rights reserved. Aural Iris&trade;, Every minute, reclaimed.&trade; and the Iris logo are trademarks of Aural Iris LLC. U.S. patent pending.</p>
+<p>This site has no forms, tracking or analytics.</p>
+</div></footer>
 </body>
 </html>
