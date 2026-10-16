@@ -158,37 +158,33 @@ p{margin:0;color:var(--muted);text-wrap:pretty;max-width:66ch}
 .platform .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
 .platform p{margin-top:24px;max-width:49ch}
 .platform .ai-line{margin-top:32px;padding-left:16px;border-left:2px solid var(--gold);color:var(--teal);font-size:16px}
-.personalization{margin:0;padding:12px 32px 8px;background:linear-gradient(135deg,#0b4d5c,var(--ink));color:var(--paper);border:1px solid #315d65;border-radius:4px;box-shadow:0 16px 40px #06323d0b}
-.personalization-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.personalization-list{list-style:none;margin:0;padding:0}
-.personalization-list li{display:grid;grid-template-columns:28px minmax(0,1fr) minmax(80px,140px);align-items:center;gap:20px;min-width:0;padding:28px 0;border-bottom:1px solid #41656b}
-.personalization-icon{display:block;width:28px;height:28px;fill:none;stroke:var(--light-gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.personalization-list h3{font-size:17px;font-weight:500;text-wrap:initial}
-.platform .personalization-list p{margin:4px 0 0;font-size:14px;line-height:1.5;color:#c5d8d5}
-.tuning-track{display:block;width:100%;height:auto;overflow:visible;fill:none}
-.tuning-rail{stroke:#567981;stroke-width:1}
-.tuning-ticks{stroke:#567981;stroke-width:1;opacity:.6}
-.tuning-fill{stroke:var(--light-gold);stroke-width:2;transform-box:view-box;transform-origin:16px 16px;transform:scaleX(var(--from))}
-.tuning-knob{transform:translateX(calc(128px * var(--from)))}
-.tuning-halo{fill:#d9a93f12;stroke:#e6bd5c70;stroke-width:1}
-.tuning-dot{fill:var(--light-gold);stroke:var(--ink);stroke-width:2}
-.personalization-list li:nth-child(1){--from:.24;--to:.76;--delay:-1s}
-.personalization-list li:nth-child(2){--from:.78;--to:.38;--delay:-4s}
-.personalization-list li:nth-child(3){--from:.44;--to:.84;--delay:-7s}
-.personalization-list li:nth-child(4){--from:.68;--to:.22;--delay:-10s}
+.continuity{margin:0;padding:24px 24px 8px;min-width:0;border:1px solid #315d65;border-radius:4px;background:radial-gradient(ellipse at 65% 40%,#155462 0%,#0a3e49 45%,var(--ink) 85%);box-shadow:0 16px 40px #06323d0b;color:var(--paper)}
+.continuity-art{display:block;width:100%;height:auto;overflow:visible}
+.continuity-caption{display:grid;grid-template-columns:1fr 1.6fr;gap:28px;padding:0 12px 24px;text-align:center;font-size:14px;color:#d8e5e2}
+.continuity-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;border-top:1px solid #41656b;font-size:12px;color:#bacecc}
+.device-signal{fill:none;stroke:#e6bd5c;stroke-width:2;stroke-linecap:round}
+.signal-path{stroke:#8aa7a7;stroke-opacity:.45;stroke-width:1;fill:none}
+.signal-pulse{fill:none;stroke:#ffe2a1;stroke-width:3;stroke-linecap:round;stroke-dasharray:1 99}
+.phone-wave{fill:var(--light-gold);transform-box:fill-box;transform-origin:center}
+.draft-line{stroke:#c5d8d5;stroke-width:4;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:0}
+.draft-line.gold{stroke:var(--light-gold)}
+.desk-glow{opacity:.45}
 .motion-control{display:none}
-@media(min-width:700px) and (max-width:1099px){.personalization{padding-inline:24px}.personalization-list li{grid-template-columns:24px minmax(0,1fr);gap:4px 16px;padding-block:22px}.personalization-icon{width:24px;height:24px}.tuning-track{grid-column:2;width:100%;max-width:160px;margin-top:4px}}
-@media(max-width:699px){.personalization{padding-inline:24px}.personalization-list li{grid-template-columns:24px minmax(0,1fr) 90px;gap:12px}.personalization-icon{width:24px;height:24px}}
-@media(max-width:359px){.personalization-list li{grid-template-columns:24px minmax(0,1fr);gap:4px 16px;padding-block:22px}.tuning-track{grid-column:2;max-width:160px;margin-top:4px}}
+@media(min-width:700px) and (max-width:1099px){.section.platform .wrap{grid-template-columns:1fr}.platform-copy{max-width:680px}.continuity{width:100%;max-width:620px;margin-inline:auto}}
+@media(max-width:699px){.continuity{padding:16px 12px 4px}.continuity-caption{padding:0 0 20px;gap:16px;font-size:13px}}
 @media(prefers-reduced-motion:no-preference){
-.tuning-fill{animation:tuning-level 12s ease-in-out var(--delay) infinite}
-.tuning-knob{animation:tuning-position 12s ease-in-out var(--delay) infinite}
-.motion-control{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-height:44px;width:fit-content;margin-left:auto;color:#c5d8d5;font-size:12px;cursor:pointer}
+.phone-wave{animation:phone-listen 1.5s ease-in-out var(--wave-delay,0s) infinite}
+.signal-pulse{animation:encounter-travel 12s ease-in-out var(--signal-delay,0s) infinite}
+.draft-line{animation:draft-arrive 12s ease-in-out var(--line-delay,0s) infinite}
+.desk-glow{animation:desk-receive 5s ease-in-out infinite}
+.motion-control{display:flex;align-items:center;gap:8px;min-height:44px;width:fit-content;color:#c5d8d5;font-size:12px;cursor:pointer}
 .motion-control input{width:14px;height:14px;margin:0;accent-color:var(--light-gold);cursor:pointer}
 .motion-control:focus-within{outline:2px solid var(--light-gold);outline-offset:2px}
-.personalization:has(.motion-control input:checked) :is(.tuning-fill,.tuning-knob){animation-play-state:paused}
-@keyframes tuning-level{0%,12%,100%{transform:scaleX(var(--from))}44%,62%{transform:scaleX(var(--to))}}
-@keyframes tuning-position{0%,12%,100%{transform:translateX(calc(128px * var(--from)))}44%,62%{transform:translateX(calc(128px * var(--to)))}}
+.continuity:has(.motion-control input:checked) :is(.phone-wave,.signal-pulse,.draft-line,.desk-glow){animation-play-state:paused}
+@keyframes phone-listen{0%,100%{transform:scaleY(.45);opacity:.6}50%{transform:scaleY(1);opacity:1}}
+@keyframes encounter-travel{0%,24%{stroke-dashoffset:0;opacity:0}30%{stroke-dashoffset:0;opacity:1}58%{stroke-dashoffset:-100;opacity:1}64%,100%{stroke-dashoffset:-100;opacity:0}}
+@keyframes draft-arrive{0%,44%{stroke-dashoffset:100;opacity:.3}66%,92%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:.3}}
+@keyframes desk-receive{0%,100%{opacity:.25}55%{opacity:.7}}
 }
 .diagram-caption{margin:0 0 24px;font-size:1rem;color:var(--teal);text-align:center;font-weight:600}
 .flow-line{fill:none;stroke:#8ca6a5;stroke-width:1;vector-effect:non-scaling-stroke}
@@ -270,7 +266,7 @@ html{scroll-behavior:smooth}
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site dark" id="top"><div class="wrap">
 <a class="brand" href="#top" aria-label="Aural Iris home"><img src="assets/aural-iris-logo.png" alt="Aural Iris logo" width="42" height="42"><span class="wordmark"><span>A</span>ural <span>I</span>ris&trade;</span></a>
-<nav aria-label="Primary"><a href="#how">How it works</a><a href="#inputs">Inputs</a><a href="#platform">Platform</a><a href="#contact">Contact</a></nav>
+<nav aria-label="Primary"><a href="#how">How it works</a><a href="#inputs">Inputs</a><a href="#platform">Across devices</a><a href="#contact">Contact</a></nav>
 </div></header>
 <main id="main">
 <div class="hero dark"><div class="wrap hero-grid"><div class="hero-copy">
@@ -317,14 +313,42 @@ html{scroll-behavior:smooth}
 </div></section>
 <section class="section emr dark" aria-labelledby="emr-title"><div class="wrap"><div class="emr-copy"><h2 id="emr-title">Works with<br>your EMR.</h2><p>Designed to work across EMRs and record systems.</p><p>Iris automates the chart work, including placing the reviewed note into your chart. You verify it. Iris never signs and never places orders.</p></div><ol class="emr-strip" aria-label="Reviewed note to chart"><li class="emr-stop"><svg class="emr-link" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true"><path class="flow-line" d="M0 4 H100"/><path class="flow-dots flow-a" pathLength="100" d="M0 4 H100"/></svg><span class="emr-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h11l6 6v20H8ZM19 3v7h6M12 15h9m-9 5h9m-9 5h5"/></svg></span><span>Note</span></li><li class="emr-stop"><svg class="emr-link" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true"><path class="flow-line" d="M0 4 H100"/><path class="flow-dots flow-b" pathLength="100" d="M0 4 H100"/></svg><span class="emr-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m7 16 6 6L26 9"/></svg></span><span>You verify</span></li><li class="emr-stop"><span class="emr-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 8h10l3 3h11v17H4ZM8 8V4h17v7M9 18h14m-14 5h9"/></svg></span><span>Chart</span></li></ol></div></section>
 <section class="section platform" id="platform" aria-labelledby="platform-title"><div class="wrap">
-<div class="platform-copy"><h2 id="platform-title">Fits the way <br>you practice.</h2><p>Choose the structure, prompts and layout that fit your day.</p></div>
-<figure class="personalization"><figcaption class="personalization-caption">Illustration of Iris customization options.</figcaption>
-<ul class="personalization-list">
-<li><svg class="personalization-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 4h13l5 5v19H7ZM20 4v6h5M11 15h10m-10 5h7m-7 4h4"/></svg><div><h3>Style</h3><p>Structure &amp; wording</p></div><svg class="tuning-track" viewBox="0 0 160 32" aria-hidden="true"><path class="tuning-rail" d="M16 16h128"/><path class="tuning-ticks" d="M16 11v10m32-8v6m32-6v6m32-6v6m32-8v10"/><path class="tuning-fill" d="M16 16h128"/><g class="tuning-knob"><circle class="tuning-halo" cx="16" cy="16" r="10"/><circle class="tuning-dot" cx="16" cy="16" r="5"/></g></svg></li>
-<li><svg class="personalization-icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="2"/><path d="M4 14h10V4m0 10h14M14 14v14"/><circle cx="21" cy="21" r="3"/></svg><div><h3>Setting</h3><p>Rooms &amp; workflow</p></div><svg class="tuning-track" viewBox="0 0 160 32" aria-hidden="true"><path class="tuning-rail" d="M16 16h128"/><path class="tuning-ticks" d="M16 11v10m32-8v6m32-6v6m32-6v6m32-8v10"/><path class="tuning-fill" d="M16 16h128"/><g class="tuning-knob"><circle class="tuning-halo" cx="16" cy="16" r="10"/><circle class="tuning-dot" cx="16" cy="16" r="5"/></g></svg></li>
-<li><svg class="personalization-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 5v7a6 6 0 0 0 12 0V5M5 5h3m6 0h3M11 18v3a6 6 0 0 0 12 0v-3"/><circle cx="23" cy="14" r="4"/></svg><div><h3>Specialty</h3><p>Sections &amp; exam prompts</p></div><svg class="tuning-track" viewBox="0 0 160 32" aria-hidden="true"><path class="tuning-rail" d="M16 16h128"/><path class="tuning-ticks" d="M16 11v10m32-8v6m32-6v6m32-6v6m32-8v10"/><path class="tuning-fill" d="M16 16h128"/><g class="tuning-knob"><circle class="tuning-halo" cx="16" cy="16" r="10"/><circle class="tuning-dot" cx="16" cy="16" r="5"/></g></svg></li>
-<li><svg class="personalization-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="m4 8 2 2 4-4m4 2h14M4 17h6m4 0h14M4 26h6m4 0h14"/></svg><div><h3>Task</h3><p>Note types</p></div><svg class="tuning-track" viewBox="0 0 160 32" aria-hidden="true"><path class="tuning-rail" d="M16 16h128"/><path class="tuning-ticks" d="M16 11v10m32-8v6m32-6v6m32-6v6m32-8v10"/><path class="tuning-fill" d="M16 16h128"/><g class="tuning-knob"><circle class="tuning-halo" cx="16" cy="16" r="10"/><circle class="tuning-dot" cx="16" cy="16" r="5"/></g></svg></li>
-</ul><label class="motion-control"><input type="checkbox">Pause motion</label>
+<div class="platform-copy"><h2 id="platform-title">Your phone listens.<br>Your desk keeps up.</h2><p>Capture the conversation on your phone, then open the same encounter on your computer to review the transcript and draft.</p></div>
+<figure class="continuity">
+<svg class="continuity-art" viewBox="0 0 620 340" role="img" aria-label="A phone recording and a computer displaying the same encounter draft.">
+<defs><linearGradient id="device-gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe4a3"/><stop offset=".5" stop-color="#bd8f38"/><stop offset="1" stop-color="#e6bd5c"/></linearGradient><radialGradient id="desk-light"><stop stop-color="#e6bd5c" stop-opacity=".18"/><stop offset="1" stop-color="#e6bd5c" stop-opacity="0"/></radialGradient><linearGradient id="device-screen" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#144d58"/><stop offset="1" stop-color="#06323d"/></linearGradient></defs>
+<ellipse class="desk-glow" cx="428" cy="168" rx="190" ry="150" fill="url(#desk-light)"/>
+<path d="M24 306h572" stroke="#436570" stroke-width="1"/>
+<rect x="44" y="36" width="132" height="270" rx="24" fill="#06323d" stroke="url(#device-gold)" stroke-width="1.7"/>
+<rect x="55" y="70" width="110" height="207" rx="10" fill="url(#device-screen)" stroke="#41656b"/>
+<path d="M91 51h38M96 291h28" stroke="#8ba6a9" stroke-width="3" stroke-linecap="round"/>
+<circle cx="110" cy="119" r="23" fill="#e6bd5c08" stroke="#b08b44" stroke-opacity=".7"/>
+<g class="device-signal"><rect x="104" y="106" width="12" height="20" rx="6"/><path d="M100 119a10 10 0 0 0 20 0M110 129v5m-5 0h10"/></g>
+<g><rect class="phone-wave" x="72" y="192" width="4" height="16" rx="2" style="--wave-delay:-.1s"/><rect class="phone-wave" x="82" y="181" width="4" height="38" rx="2" style="--wave-delay:-.4s"/><rect class="phone-wave" x="92" y="173" width="4" height="54" rx="2" style="--wave-delay:-.8s"/><rect class="phone-wave" x="102" y="186" width="4" height="28" rx="2" style="--wave-delay:-.2s"/><rect class="phone-wave" x="112" y="168" width="4" height="64" rx="2" style="--wave-delay:-.6s"/><rect class="phone-wave" x="122" y="179" width="4" height="42" rx="2" style="--wave-delay:-1s"/><rect class="phone-wave" x="132" y="188" width="4" height="24" rx="2" style="--wave-delay:-.5s"/><rect class="phone-wave" x="142" y="194" width="4" height="12" rx="2" style="--wave-delay:-.9s"/></g>
+<circle cx="78" cy="254" r="3" fill="#e6bd5c"/><path d="M89 254h54" stroke="#799b9f" stroke-width="2" stroke-linecap="round"/>
+<path class="signal-path" d="M186 171H286"/>
+<path class="signal-pulse" pathLength="100" d="M186 171H286"/>
+<path class="signal-pulse" pathLength="100" d="M186 171H286" style="--signal-delay:.35s"/>
+<path class="signal-pulse" pathLength="100" d="M186 171H286" style="--signal-delay:.7s"/>
+<rect x="296" y="64" width="292" height="220" rx="13" fill="#06323d" stroke="url(#device-gold)" stroke-width="1.7"/>
+<rect x="307" y="76" width="270" height="183" rx="5" fill="url(#device-screen)" stroke="#41656b"/>
+<path d="M419 284v22m46-22v22m-63 0h80" stroke="#be984a" stroke-width="2" stroke-linecap="round"/>
+<circle cx="442" cy="272" r="2" fill="#be984a"/>
+<path d="M350 77v181" stroke="#41656b"/>
+<rect x="320" y="94" width="17" height="17" rx="3" fill="#e6bd5c1a" stroke="#d7ad57"/>
+<rect x="320" y="124" width="17" height="17" rx="3" fill="none" stroke="#5a7f85"/>
+<rect x="320" y="154" width="17" height="17" rx="3" fill="none" stroke="#5a7f85"/>
+<path d="M373 101h77" stroke="#e6bd5c" stroke-width="4" stroke-linecap="round"/>
+<path d="M373 118h179" stroke="#41656b"/>
+<path class="draft-line" pathLength="100" d="M373 140h166" style="--line-delay:0s"/>
+<path class="draft-line" pathLength="100" d="M373 155h143" style="--line-delay:.2s"/>
+<path class="draft-line" pathLength="100" d="M373 170h157" style="--line-delay:.4s"/>
+<path class="draft-line" pathLength="100" d="M373 185h105" style="--line-delay:.6s"/>
+<path class="draft-line gold" pathLength="100" d="M373 216h63" style="--line-delay:.8s"/>
+<path class="draft-line" pathLength="100" d="M373 233h153" style="--line-delay:1s"/>
+</svg>
+<figcaption class="continuity-caption"><span>Capture on your phone</span><span>Review on your computer</span></figcaption>
+<div class="continuity-footer"><span>Illustration</span><label class="motion-control"><input type="checkbox">Pause motion</label></div>
 </figure></div></section>
 <section class="section faq" id="faq" aria-labelledby="faq-title"><div class="wrap split"><h2 id="faq-title">FAQ</h2><div class="faq-list">
 <div class="faq-item"><h3>What is Iris?</h3><p>Iris is an AI clinical assistant that handles documentation and chart work so clinicians can focus on their patients.</p></div>
