@@ -173,11 +173,13 @@ p{margin:0;color:var(--muted);text-wrap:pretty;max-width:66ch}
 @media(min-width:700px) and (max-width:1099px){.section.platform .wrap{grid-template-columns:1fr}.platform-copy{max-width:680px}.continuity{width:100%;max-width:620px;margin-inline:auto}}
 @media(max-width:699px){.continuity{padding:16px 12px}.continuity-caption{padding-top:8px;font-size:14px}}
 @media(prefers-reduced-motion:no-preference){
+@supports selector(:has(*)){
 .phone-wave{animation:phone-listen 1.5s ease-in-out var(--wave-delay,0s) infinite}
 .signal-pulse{animation:encounter-travel 9s linear var(--signal-delay,0s) infinite}
 .draft-line{animation:draft-arrive 9s ease-in-out var(--line-delay,0s) infinite}
 .iris-process{animation:iris-transform 18s linear infinite}
 .desk-glow{animation:desk-receive 4.5s ease-in-out infinite}
+}
 @keyframes phone-listen{0%,100%{transform:scaleY(.45);opacity:.6}50%{transform:scaleY(1);opacity:1}}
 @keyframes encounter-travel{0%{stroke-dashoffset:0;opacity:0}10%,80%{opacity:1}100%{stroke-dashoffset:-100;opacity:0}}
 @keyframes draft-arrive{0%,18%{stroke-dashoffset:100;opacity:.35}48%,92%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:.35}}
@@ -228,6 +230,13 @@ footer .company{color:var(--paper)}
 @media(max-width:300px){.input-map{grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:0;padding-right:0}.input-connectors{display:none}.input-source{height:auto;min-height:44px;padding-block:6px}.input-iris{grid-column:1;grid-row:auto;justify-self:start;margin-top:12px}}
 @media(prefers-reduced-motion:no-preference){
 html{scroll-behavior:smooth}
+.btn,nav a{transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s}
+.blade-reveal{animation:iris-open 1.4s cubic-bezier(.16,1,.3,1) both}
+.blade-reveal:nth-child(2){animation-delay:.06s}.blade-reveal:nth-child(3){animation-delay:.12s}.blade-reveal:nth-child(4){animation-delay:.18s}.blade-reveal:nth-child(5){animation-delay:.24s}.blade-reveal:nth-child(6){animation-delay:.3s}
+.ring-reveal{stroke-dasharray:100;animation:ring-draw 1.6s cubic-bezier(.16,1,.3,1) both}
+.iris-detail{animation:iris-settle 1s ease-out .5s both}
+.core-reveal{animation:core-settle .8s cubic-bezier(.16,1,.3,1) .95s both}
+@supports selector(:has(*)){
 .motion-control{position:relative;display:flex;align-items:center;gap:12px;width:fit-content;min-height:44px;margin-top:16px;color:#c5d8d5;font-size:14px;cursor:pointer}
 .motion-control input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
 .mc-box{display:grid;place-items:center;flex-shrink:0;width:20px;height:20px;border:1.5px solid #8da7a9;border-radius:4px}
@@ -236,12 +245,6 @@ input:checked+.mc-box{background:var(--light-gold);border-color:var(--light-gold
 input:checked+.mc-box:after{opacity:1}
 .motion-control:has(input:focus-visible){outline:3px solid var(--light-gold);outline-offset:3px}
 body:has(.motion-control input:checked) :is(.iris-blades,.iris-halo,.core-glow,.pulse-light,.core-ripple,.orbit,.ring-comet,.flow-dots,.input-dots,.phone-wave,.signal-pulse,.draft-line,.iris-process,.desk-glow){animation-play-state:paused}
-.btn,nav a{transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s}
-.blade-reveal{animation:iris-open 1.4s cubic-bezier(.16,1,.3,1) both}
-.blade-reveal:nth-child(2){animation-delay:.06s}.blade-reveal:nth-child(3){animation-delay:.12s}.blade-reveal:nth-child(4){animation-delay:.18s}.blade-reveal:nth-child(5){animation-delay:.24s}.blade-reveal:nth-child(6){animation-delay:.3s}
-.ring-reveal{stroke-dasharray:100;animation:ring-draw 1.6s cubic-bezier(.16,1,.3,1) both}
-.iris-detail{animation:iris-settle 1s ease-out .5s both}
-.core-reveal{animation:core-settle .8s cubic-bezier(.16,1,.3,1) .95s both}
 .iris-blades{animation:iris-drift 48s ease-in-out 1.75s infinite}
 .iris-halo{animation:halo-breathe 8s ease-in-out 1.75s infinite}
 .core-glow{animation:core-breathe 5.6s ease-in-out 1.75s infinite both}
@@ -253,6 +256,7 @@ body:has(.motion-control input:checked) :is(.iris-blades,.iris-halo,.core-glow,.
 .flow-dots{animation:flow-travel 10s linear infinite}
 .input-dots{animation:input-travel 10s linear infinite}
 .flow-b{animation-delay:-2.5s}.flow-c{animation-delay:-5s}.flow-d{animation-delay:-7.5s}.flow-e{animation-delay:-1.25s}
+}
 @keyframes iris-open{from{transform:rotate(-28deg) scale(.68);opacity:0}to{transform:rotate(0) scale(1);opacity:1}}
 @keyframes ring-draw{from{stroke-dashoffset:100;opacity:0}to{stroke-dashoffset:0;opacity:1}}
 @keyframes iris-settle{from{opacity:0}to{opacity:1}}
